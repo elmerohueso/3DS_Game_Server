@@ -5,7 +5,7 @@ Generated web page includes a sortable table with auto-generated QR codes for do
 Game titles link to descriptions on www.gametdb.com, and table also pulls cover art from there.
 Uses Python SimpleHTTPServer, so just one download request/thread at a time.
 
-To do: Add error logging for unparseable titleids and games not found in release XML
+To do (maybe someday, but I don't really need it): Add error logging for unparseable titleids and games not found in release XML
 
 Requires Python 2.7
 
