@@ -38,7 +38,14 @@ def addListing(release):
     global strTable
     name = release.find('name').text
     print('Found game "%s"...' % name)
-    id = release.find('serial').text.split('-')[1]
+    id = release.find('serial').text.split('-')
+    stringcount = len(id)
+    print('count "%s"..' % stringcount)
+    if stringcount == 3:
+        id = release.find('serial').text.split('-')[2]
+    elif stringcount == 2:
+        id = release.find('serial').text.split('-')[1]
+
     coverURL = 'https://art.gametdb.com/3ds/box/US/%s.png' % id
     dbURL = 'https://www.gametdb.com/3DS/%s' % id
     strTable = strTable + '''
